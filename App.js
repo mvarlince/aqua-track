@@ -7,12 +7,13 @@ import Goals from "./src/components/Goals";
 import Tracker from "./src/Tracker";
 import Controls from "./src/components/Controls";
 
-const goal = 2000;
+// const goal = 2000;
 const bottle = 280;
 
 export default function App() {
 
   const [intake, setIntake] = useState(0);
+  const [goal, setGoal] = useState(3000)
 
   const getPreviousIntake = async () => {
     const value = await AsyncStorage.getItem('@storage_Key')
@@ -57,8 +58,8 @@ export default function App() {
         <Box height={50} width="100%" bg="#29313C">
         </Box>
         <Title />
-        <Goals goal={goal} />
-        <Tracker goal={goal} intake={intake} />
+        <Goals goal={goal} setGoal={setGoal}/>
+        <Tracker goal={goal} intake={intake} setIntake={setIntake}/>
         <Controls intake={intake} setIntake={setIntake} />
       </Box>
     </NativeBaseProvider>
