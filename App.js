@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Box, NativeBaseProvider, Toast } from "native-base";
-import { StyleSheet} from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Title from "./src/components/Title";
 import Goals from "./src/components/Goals";
 import Tracker from "./src/components/Tracker";
@@ -32,7 +31,7 @@ export default function App() {
         description: "You met your water intake goal",
         bg: "blue.400",
         w: 360,
-        h: 90,
+        h: 60,
         p: 16,
       });
     }
@@ -64,12 +63,3 @@ export default function App() {
     </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

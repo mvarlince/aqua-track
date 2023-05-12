@@ -18,11 +18,12 @@ export default function Controls({ intake, setIntake }) {
           borderRadius={16}
           paddingLeft={6}
           paddingRight={6}
-          onPress={() => setIntake(intake + 250)}
+          onPress={() => setIntake(intake + 235)}
         >
           <Text color="whitesmoke" fontWeight="700" fontSize="lg">
             {" "}
-            1 cup{" "}
+            1 cup {'\n'}
+            235ml{" "}
           </Text>
         </Button>
         <Button
@@ -33,15 +34,16 @@ export default function Controls({ intake, setIntake }) {
           paddingRight={6}
           onPress={() => setIntake(intake + 500)}
         >
-          <Text color="whitesmoke" fontWeight="700" fontSize="lg">
-            {" "}
-            1 bottle{" "}
+          <Text color="whitesmoke" fontWeight="700" fontSize="lg" >
+            {"  "}
+            1 bottle{"\n"}
+            {""}   500ml  {" "}
           </Text>
         </Button>
       </Box>
       <Button
         mt={5}
-        colorScheme="gray"
+        colorScheme="red"
         pl={8}
         pr={8}
         borderRadius={16}
