@@ -4,7 +4,7 @@ export default function Controls({ intake, setIntake }) {
   return (
     <Box w="100%" alignItems="center">
       <Text color="whitesmoke" fontSize="2xl" mb={4}>
-        <AddIcon color="whitesmoke" /> Add water
+        <AddIcon color="whitesmoke" /> Add Water
       </Text>
       <Box
         flexDirection="row"
@@ -35,14 +35,21 @@ export default function Controls({ intake, setIntake }) {
         >
           <Text color="whitesmoke" fontWeight="700" fontSize="lg">
             {" "}
-            1 bokle{" "}
+            1 bottle{" "}
           </Text>
         </Button>
       </Box>
-      <Button mt={5} colorScheme="gray" pl={8} pr={8} borderRadius={16} onPress={() => setIntake(0)}>
-      <Text color="whitesmoke" fontWeight="700" fontSize="lg">
-            Reset
-          </Text>
+      <Button
+        mt={5}
+        colorScheme="gray"
+        pl={8}
+        pr={8}
+        borderRadius={16}
+        onPress={()=>setIntake(0)}
+      >
+        <Text color="whitesmoke" fontWeight="700" fontSize="lg">
+          Reset
+        </Text>
       </Button>
     </Box>
   );
