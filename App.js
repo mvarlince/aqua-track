@@ -10,6 +10,7 @@ export default function App() {
 
   const [intake, setIntake] = useState(0);
   const [goal, setGoal] = useState(3000);
+  const [toastDisplayed, setToastDisplayed] = useState(false)
 
   const getPreviousIntake = async () => {
     const value = await AsyncStorage.getItem("@storage_Key");
@@ -25,7 +26,8 @@ export default function App() {
   };
 
   const checkGoal = () => {
-    if (intake >= goal) {
+    if (intake >= goal && !toastDisplayed) {
+      setToastDisplayed(true)
       return Toast.show({
         title: "Congrats!!",
         description: "You met your water intake goal",
@@ -33,6 +35,7 @@ export default function App() {
         w: 360,
         h: 60,
         p: 16,
+        onCloseComplete: () => setToastDisplayed(false)
       });
     }
   }

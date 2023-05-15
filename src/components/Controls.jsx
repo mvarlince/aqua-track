@@ -4,7 +4,7 @@ export default function Controls({ intake, setIntake }) {
   return (
     <Box w="100%" alignItems="center">
       <Text color="whitesmoke" fontSize="2xl" mb={4}>
-        <AddIcon color="whitesmoke" /> Add Water
+      Add Water Portion
       </Text>
       <Box
         flexDirection="row"
